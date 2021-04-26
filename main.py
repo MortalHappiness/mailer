@@ -55,8 +55,8 @@ with smtplib.SMTP(config.SERVER, config.PORT) as smtp:
         print(f"Successfully sending email to {receiver}")
         count += 1
         if count % config.BATCH == 0:
-            print("\n{count} mails was successfully sent, "
-                  "sleeping for {config.SLEEP_TIME} seconds...")
+            print(f"\n{count} mails was successfully sent, "
+                  f"sleeping for {config.SLEEP_TIME} seconds...")
             time.sleep(config.SLEEP_TIME)
 
 print(f"\n{count} letters was successfully sent")
